@@ -56,10 +56,11 @@ object SjpApplication extends App {
     SjpPwnQuery.jsoupService
 
   private def createRepositoryLayer(config: Layer[ReadError[String], ZConfig[Configuration]],
-                                    http4sLayer: ULayer[Has[Client[Task]]]) = {
+                                    http4sLayer: ULayer[Has[Client[Task]]]
+  ) = {
     val httpsLayer = http4sLayer >>> Http4s.http4s
     val ankiCfg = config.narrow(_.anki)
 
-    (encoders ++ ankiCfg ++ httpsLayer) >>> AnkiRestRepo.service[CirceEntitySerDes]
+    (addNoteSerDes ++ createDeckSerDer ++ ankiCfg ++ httpsLayer) >>> AnkiRestRepo.service[CirceEntitySerDes]
   }
 }

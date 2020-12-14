@@ -1,6 +1,6 @@
 name := "wth-sjp-anki-app"
 
-version := "0.0.1"
+version := "0.0.1-SNAPSHOT"
 
 organization in ThisBuild := "io.funkyminds"
 
@@ -10,9 +10,9 @@ scalacOptions := Seq("-unchecked", "-deprecation")
 
 //@formatter:off
 libraryDependencies ++= Seq(
-  "io.funkyminds"       %%  "wth-anki"            % "0.0.1",
-  "io.funkyminds"       %%  "wth-sjp"             % "0.0.1",
-  "io.funkyminds"       %%  "wth-http4s"          % "0.0.1",
+  "io.funkyminds"       %%  "wth-anki"            % "0.0.1-SNAPSHOT",
+  "io.funkyminds"       %%  "wth-sjp"             % "0.0.1-SNAPSHOT",
+  "io.funkyminds"       %%  "wth-http4s"          % "0.0.1-SNAPSHOT",
   "dev.zio"             %%  "zio"                 % "1.0.3"
 )
 //@formatter:on
