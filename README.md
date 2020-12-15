@@ -5,6 +5,7 @@
 This is a full application that integrates:
 - [sjp.pwn.pl](https://sjp.pwn.pl/) as a translation service
 - [anki](https://apps.ankiweb.net/) as a flashcard/repository service
+- [wth-core](https://https://github.com/funkyminds/wth-core) to source pons.eu definitions into anki
 
 Configurable via a [zio-config](https://zio.github.io/zio-config/).
 
